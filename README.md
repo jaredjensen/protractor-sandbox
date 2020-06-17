@@ -29,3 +29,4 @@ npm t
 | ------------- | ------------------------- |
 | `npm restart` | Restart Docker containers |
 | `npm stop`    | Stop Docker containers    |
+| `npm lint`    | Lint JavaScript files     |
