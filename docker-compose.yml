@@ -1,0 +1,15 @@
+version: '3.5'
+services:
+  selenium:
+    container_name: protractor-selenium
+    image: selenium/standalone-chrome
+    ports:
+      - '4444:4444'
+  web:
+    container_name: protractor-web
+    image: nginx:latest
+    ports:
+      - '8080:8080'
+    volumes:
+      - ./web/nginx.conf:/etc/nginx/nginx.conf
+      - ./web/index.html:/usr/share/nginx/html/index.html
